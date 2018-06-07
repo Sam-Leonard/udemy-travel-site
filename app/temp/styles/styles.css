@@ -1097,3 +1097,18 @@ Instead edit gulp/templates/sprite */
       margin-right: 1.4rem
   }
   }
+
+.site-header {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(47,85,114, 0.3);
+  width: 100%;
+}
+
+.site-header__btn-container {
+    float: right;
+  }
+
+.primary-nav {
+  
+}
