@@ -1111,7 +1111,13 @@ Instead edit gulp/templates/sprite */
   z-index: 2;
   width: 100%;
   padding: 10px 0;
+  -webkit-transition: background-color .3s ease-out;
+  transition: background-color .3s ease-out;
 }
+
+.site-header--is-expanded {
+    background-color: rgba(47,85,114, .55);
+  }
 
 @media (min-width: 800px) {
 
@@ -1120,8 +1126,11 @@ Instead edit gulp/templates/sprite */
 }
   }
 
+@media (min-width: 800px) {
+
 .site-header__btn-container {
-    float: right;
+      float: right
+  }
   }
 
 .site-header__logo {
@@ -1154,6 +1163,7 @@ Instead edit gulp/templates/sprite */
     height: 20px;
     background-color: #FFF;
     position: absolute;
+    z-index: 10;
     top: 10px;
     right: 10px;
   }
@@ -1166,22 +1176,51 @@ Instead edit gulp/templates/sprite */
   }
 
 .site-header__menu-content {
-    display: none;
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    position: relative;
+    z-index: -10;
+    text-align: center;
+    padding-top: 90px;
   }
 
 @media (min-width: 800px) {
 
 .site-header__menu-content {
-      display: block
+      opacity: 1;
+      z-index: 1;
+      padding-top: 0;
+      -webkit-transform: scale(1);
+              transform: scale(1)
   }
   }
 
 .site-header__menu-content--is-visable {
-      display: block;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+      z-index: 1;
     }
 
+.primary-nav {
+  padding-top: 10px;
+}
+
+@media (min-width: 800px) {
+
+.primary-nav {
+    padding-top: 0
+}
+  }
+
+@media (min-width: 800px) {
+
 .primary-nav--pull-right {
-    float: right;
+      float: right
+  }
   }
 
 .primary-nav--pull-right ul {
@@ -1197,14 +1236,45 @@ Instead edit gulp/templates/sprite */
 
 .primary-nav--pull-right li {
       list-style: none;
-      float: left;
-      padding-right: 20px;
+      display: inline-block;
+      padding-right: 7px;
     }
+
+@media (min-width: 800px) {
+
+.primary-nav--pull-right li {
+        padding-right: 20px;
+        float: left;
+        display: block
+    }
+  }
+
+.primary-nav--pull-right li:last-child {
+      padding-right: 0;
+    }
+
+@media (min-width: 800px) {
+
+.primary-nav--pull-right li:last-child {
+        padding-right: 20px
+    }
+  }
 
 .primary-nav--pull-right a {
       color: #FFF;
       text-decoration: none;
       font-weight: 300;
       display: block;
-      padding: 12px 0;
+      padding: 5px 8px;
+      font-size: .8rem;
+      background-color: rgba(47,85,114, .5);
     }
+
+@media (min-width: 800px) {
+
+.primary-nav--pull-right a {
+        padding: 12px 0;
+        font-size: 1rem;
+        background-color: transparent
+    }
+  }
