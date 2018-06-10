@@ -46,6 +46,7 @@
 
   &__menu-content {
     display: none;
+    padding-top: 100px;
 
     @mixin atMedium {
       display: block;

@@ -1167,6 +1167,7 @@ Instead edit gulp/templates/sprite */
 
 .site-header__menu-content {
     display: none;
+    padding-top: 100px;
   }
 
 @media (min-width: 800px) {
