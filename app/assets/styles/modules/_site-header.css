@@ -50,5 +50,9 @@
     @mixin atMedium {
       display: block;
     }
+
+    &--is-visable {
+      display: block;
+    }
   }
 }
